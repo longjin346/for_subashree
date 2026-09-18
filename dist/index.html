@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#2245c7">
-  <meta name="description" content="A playful five-question workplace well-being tarot quiz.">
-  <title>Your well-being tarot card</title>
+  <meta name="description" content="A playful five-question workplace well-being check-in.">
+  <title>Your well-being profile</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:opsz,wght@9..144,700&display=swap');
     :root{--blue:#2146c7;--navy:#13265a;--pink:#f5a3b4;--paper:#fff9e9;--yellow:#ffd43d;--mint:#82d7b5;--purple:#7651bc;--ink:#152454}
@@ -38,49 +38,47 @@
     .nav{min-height:44px;border:2px solid var(--ink);border-radius:12px;padding:12px 20px;font-weight:700;cursor:pointer;box-shadow:3px 3px 0 var(--ink);background:var(--paper);color:var(--ink)}
     .nav.primary{background:var(--blue);color:white}
     .nav:disabled{opacity:.4;cursor:not-allowed;box-shadow:none;transform:translate(2px,2px)}
-    .result{width:min(100%,900px);display:grid;grid-template-columns:minmax(240px,390px) 1fr;gap:clamp(28px,6vw,70px);align-items:center;animation:reveal .8s cubic-bezier(.2,.85,.2,1)}
+    .result{width:min(100%,680px);animation:reveal .8s cubic-bezier(.2,.85,.2,1)}
     @keyframes reveal{from{opacity:0;transform:scale(.92) rotate(-1deg)}to{opacity:1;transform:none}}
-    .card-wrap{position:relative;filter:drop-shadow(12px 14px 0 rgba(19,38,90,.25))}
-    .card-wrap:before{content:"✦";position:absolute;z-index:2;top:-24px;right:-25px;font-size:58px;color:var(--yellow);text-shadow:2px 2px 0 var(--ink);animation:spin 4s linear infinite}
-    @keyframes spin{to{transform:rotate(360deg)}}
-    .card{display:block;width:100%;border:3px solid var(--ink);border-radius:24px}
+    .profile-mark{width:92px;height:92px;display:grid;place-items:center;margin:0 auto 20px;border:3px solid var(--ink);border-radius:50%;background:var(--yellow);font:700 3.8rem/1 "Fraunces",serif;box-shadow:6px 6px 0 var(--ink)}
+    .result-copy{text-align:center}
     .result-copy h1{margin:12px 0 18px}
     .result-copy p{font-size:clamp(1.05rem,2.4vw,1.35rem);line-height:1.55;margin:0 0 24px}
     .wish{background:var(--paper);border:2px solid var(--ink);border-radius:16px;padding:18px;box-shadow:5px 5px 0 var(--ink)}
     .confetti{position:fixed;top:-30px;width:12px;height:22px;z-index:10;pointer-events:none;animation:fall var(--d) linear var(--delay) forwards;transform:rotate(var(--r));background:var(--c)}
     @keyframes fall{to{transform:translate3d(var(--x),110svh,0) rotate(760deg)}}
-    @media(max-width:700px){.shell{padding:max(18px,env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left))}.stage{padding:28px 0}.brand{display:none}.progress{height:9px}h1{font-size:clamp(2rem,10vw,3.3rem)}.result{grid-template-columns:1fr;max-width:430px;padding-top:12px}.card-wrap{width:min(76vw,330px);margin:auto}.result-copy{text-align:center}.footer{align-items:flex-end}.hint{display:none}.nav{padding:11px 16px}.answer{padding:14px}.result-copy h1{font-size:2.7rem}}
-    @media(max-width:420px){.topbar{gap:10px}.count{min-width:44px;font-size:.88rem}.stage{padding:22px 0}.eyebrow{font-size:.84rem;padding:6px 10px}h1{font-size:clamp(1.85rem,9.7vw,2.45rem);margin:17px 0 23px}.answers{gap:10px}.answer{align-items:flex-start;gap:11px;padding:13px;min-height:62px}.key{flex-basis:32px;height:32px}.answer-copy{font-size:1rem;line-height:1.32}.controls{width:100%;justify-content:space-between}.nav{min-width:calc(50% - 5px);padding:11px 12px}.card-wrap{width:min(82vw,310px)}.result-copy h1{font-size:clamp(2.2rem,11vw,2.7rem)}}
+    @media(max-width:700px){.shell{padding:max(18px,env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left))}.stage{padding:28px 0}.brand{display:none}.progress{height:9px}h1{font-size:clamp(2rem,10vw,3.3rem)}.result{max-width:430px;padding-top:12px}.footer{align-items:flex-end}.hint{display:none}.nav{padding:11px 16px}.answer{padding:14px}.result-copy h1{font-size:2.7rem}}
+    @media(max-width:420px){.topbar{gap:10px}.count{min-width:44px;font-size:.88rem}.stage{padding:22px 0}.eyebrow{font-size:.84rem;padding:6px 10px}h1{font-size:clamp(1.85rem,9.7vw,2.45rem);margin:17px 0 23px}.answers{gap:10px}.answer{align-items:flex-start;gap:11px;padding:13px;min-height:62px}.key{flex-basis:32px;height:32px}.answer-copy{font-size:1rem;line-height:1.32}.controls{width:100%;justify-content:space-between}.nav{min-width:calc(50% - 5px);padding:11px 12px}.result-copy h1{font-size:clamp(2.2rem,11vw,2.7rem)}}
     @media(prefers-reduced-motion:reduce){*,*:before{animation:none!important;transition:none!important}.confetti{display:none}}
   </style>
 </head>
 <body>
   <main class="shell">
-    <header class="topbar" aria-label="Quiz progress"><div class="brand">Well-being tarot</div><div class="progress" aria-hidden="true"><span id="progress"></span></div><div class="count" id="count">1 / 5</div></header>
+    <header class="topbar" aria-label="Quiz progress"><div class="brand">Well-being check-in</div><div class="progress" aria-hidden="true"><span id="progress"></span></div><div class="count" id="count">1 / 5</div></header>
     <section class="stage" id="stage" aria-live="polite"></section>
     <footer class="footer" id="footer"><div class="hint">Press 1 - 4 to choose. Press Enter to continue.</div><div class="controls"><button class="nav" id="back" type="button">Back</button><button class="nav primary" id="next" type="button" disabled>Next</button></div></footer>
   </main>
   <script>
     const questions=[
-      {tag:"A little free time",q:"You get 30 free minutes. What do you do?",a:["Find a quiet corner and watch the clouds.","Clear 1 task. Tiny win, big mood.","Get a kopi / tea or chat with a teammate.","Start the task you have been politely avoiding."],cards:["star","chariot","empress","strength"]},
-      {tag:"Plot twist",q:"A surprise task lands. What is your first move?",a:["Breathe. You have handled busier days.","Check in with others. Snacks may help.","Pick the next step and begin.","Find 1 useful angle. Plot twist accepted."],cards:["strength","empress","chariot","star"]},
-      {tag:"Team magic",q:"Your dream team brings…",a:["Care, good food, and room to grow.","Fresh ideas and a hopeful outlook.","Calm support when things get spicy.","Clear goals and steady progress."],cards:["empress","star","strength","chariot"]},
-      {tag:"The small win",q:"What is the best end-of-day feeling?",a:["1 thing moved forward. Nice.","You stayed kind under pressure.","You feel recharged, not just logged off.","You shared a laugh with someone."],cards:["chariot","strength","star","empress"]},
-      {tag:"Final check-in",q:"Pick your reminder for this week",a:["Small hope can shift a whole day.","Make room for good food and good people.","1 step is still progress.","Quiet courage gets things moving."],cards:["star","empress","chariot","strength"]}
+      {tag:"A little free time",q:"You get 30 free minutes. What do you do?",a:["Find a quiet corner and watch the clouds.","Clear 1 task. Tiny win, big mood.","Get a kopi / tea or chat with a teammate.","Start the task you have been politely avoiding."],profiles:["dreamer","rationalist","energizer","caretaker"]},
+      {tag:"Plot twist",q:"A surprise task lands. What is your first move?",a:["Breathe. You have handled busier days.","Check in with others. Snacks may help.","Pick the next step and begin.","Find 1 useful angle. Plot twist accepted."],profiles:["caretaker","energizer","rationalist","dreamer"]},
+      {tag:"Team magic",q:"Your dream team brings…",a:["Care, good food, and room to grow.","Fresh ideas and a hopeful outlook.","Calm support when things get spicy.","Clear goals and steady progress."],profiles:["energizer","dreamer","caretaker","rationalist"]},
+      {tag:"The small win",q:"What is the best end-of-day feeling?",a:["1 thing moved forward. Nice.","You stayed kind under pressure.","You feel recharged, not just logged off.","You shared a laugh with someone."],profiles:["rationalist","caretaker","dreamer","energizer"]},
+      {tag:"Final check-in",q:"Pick your reminder for this week",a:["Small hope can shift a whole day.","Make room for good food and good people.","1 step is still progress.","Quiet courage gets things moving."],profiles:["dreamer","energizer","rationalist","caretaker"]}
     ];
     const results={
-      star:{title:"The Star",type:"The hopeful human",image:"assets/the-star.png",wish:"May you find fresh energy and lighter days. Keep shining at a sensible brightness."},
-      strength:{title:"Strength",type:"The quiet powerhouse",image:"assets/strength.png",wish:"May you trust your resilience and protect your peace. Gentle can be mighty."},
-      empress:{title:"The Empress",type:"The good-vibes gardener",image:"assets/the-empress.png",wish:"May you have care, creativity, and good company. May your kopi or tea be warm and your meetings be short."},
-      chariot:{title:"The Chariot",type:"The focused force",image:"assets/the-chariot.png",wish:"May you move forward with clarity and confidence. One meaningful step is enough."}
+      energizer:{title:"Energizer",mark:"E",summary:"You bring momentum and lift the room. You help people move from ‘where do we start?’ to ‘let’s go’.",support:"You give a lot of energy to others. If you have been running on empty, a Mental Health First Aider can help you make space to recharge."},
+      caretaker:{title:"Caretaker",mark:"C",summary:"You notice people and make room for them. Your care helps others feel supported.",support:"You always take care of people. It is time to take care of yourself too. A Mental Health First Aider can be there to listen."},
+      dreamer:{title:"Dreamer",mark:"D",summary:"You spot possibility and bring a hopeful perspective. You help people see beyond today’s to-do list.",support:"If your thoughts feel heavy, sharing them with a Mental Health First Aider can make them easier to carry."},
+      rationalist:{title:"Rationalist",mark:"R",summary:"You bring calm thinking and practical clarity. You help turn a big problem into a useful next step.",support:"You do not have to solve everything alone. A Mental Health First Aider can offer a listening ear when you need one."}
     };
     let step=0;const answers=Array(questions.length).fill(null);
     const stage=document.getElementById('stage'),back=document.getElementById('back'),next=document.getElementById('next'),progress=document.getElementById('progress'),count=document.getElementById('count'),footer=document.getElementById('footer');
-    function render(){const item=questions[step];count.textContent=`${step+1} / ${questions.length}`;progress.style.width=`${((step+1)/questions.length)*100}%`;back.disabled=step===0;next.disabled=answers[step]===null;next.textContent=step===questions.length-1?'Reveal my card':'Next';stage.innerHTML=`<div class="question" key="${step}"><div class="eyebrow">✦ ${item.tag}</div><h1>${item.q}</h1><div class="answers" role="radiogroup" aria-label="Answer choices">${item.a.map((text,i)=>`<button class="answer ${answers[step]===i?'selected':''}" type="button" role="radio" aria-checked="${answers[step]===i}" data-i="${i}"><span class="key">${i+1}</span><span class="answer-copy">${text}</span></button>`).join('')}</div></div>`;stage.querySelectorAll('.answer').forEach(btn=>btn.onclick=()=>select(Number(btn.dataset.i)))}
+    function render(){const item=questions[step];count.textContent=`${step+1} / ${questions.length}`;progress.style.width=`${((step+1)/questions.length)*100}%`;back.disabled=step===0;next.disabled=answers[step]===null;next.textContent=step===questions.length-1?'See my profile':'Next';stage.innerHTML=`<div class="question" key="${step}"><div class="eyebrow">✦ ${item.tag}</div><h1>${item.q}</h1><div class="answers" role="radiogroup" aria-label="Answer choices">${item.a.map((text,i)=>`<button class="answer ${answers[step]===i?'selected':''}" type="button" role="radio" aria-checked="${answers[step]===i}" data-i="${i}"><span class="key">${i+1}</span><span class="answer-copy">${text}</span></button>`).join('')}</div></div>`;stage.querySelectorAll('.answer').forEach(btn=>btn.onclick=()=>select(Number(btn.dataset.i)))}
     function select(i){answers[step]=i;render();stage.querySelector(`[data-i="${i}"]`).focus()}
-    function winner(){const score={star:0,strength:0,empress:0,chariot:0};answers.forEach((answer,i)=>score[questions[i].cards[answer]]++);const max=Math.max(...Object.values(score));const tied=Object.keys(score).filter(k=>score[k]===max);if(tied.length===1)return tied[0];const finalChoice=questions[4].cards[answers[4]];return tied.includes(finalChoice)?finalChoice:tied[0]}
+    function winner(){const score={energizer:0,caretaker:0,dreamer:0,rationalist:0};answers.forEach((answer,i)=>score[questions[i].profiles[answer]]++);const max=Math.max(...Object.values(score));const tied=Object.keys(score).filter(k=>score[k]===max);if(tied.length===1)return tied[0];const finalChoice=questions[4].profiles[answers[4]];return tied.includes(finalChoice)?finalChoice:tied[0]}
     function celebrate(){const colors=['#2146c7','#ffd43d','#7651bc','#82d7b5','#f15b7b','#fff9e9'];for(let i=0;i<85;i++){const bit=document.createElement('i');bit.className='confetti';bit.style.left=Math.random()*100+'vw';bit.style.setProperty('--x',(Math.random()*180-90)+'px');bit.style.setProperty('--d',(2.2+Math.random()*2.2)+'s');bit.style.setProperty('--delay',(Math.random()*.65)+'s');bit.style.setProperty('--r',(Math.random()*180)+'deg');bit.style.setProperty('--c',colors[i%colors.length]);document.body.appendChild(bit);setTimeout(()=>bit.remove(),5000)}}
-    function showResult(){const key=winner(),r=results[key];document.querySelector('.topbar').style.visibility='hidden';footer.innerHTML='<div></div><div class="controls"><button class="nav" id="restart" type="button">Take it again</button></div>';stage.innerHTML=`<div class="result"><div class="card-wrap"><img class="card" src="${r.image}" alt="${r.title} tarot card illustration"></div><div class="result-copy"><div class="eyebrow">Your card has arrived ✦</div><h1>${r.type}</h1><p>You drew <strong>${r.title}</strong>.</p><div class="wish">${r.wish}</div></div></div>`;document.getElementById('restart').onclick=()=>location.reload();celebrate()}
+    function showResult(){const key=winner(),r=results[key];document.querySelector('.topbar').style.visibility='hidden';footer.innerHTML='<div></div><div class="controls"><button class="nav" id="restart" type="button">Try again</button></div>';stage.innerHTML=`<div class="result"><div class="result-copy"><div class="profile-mark" aria-hidden="true">${r.mark}</div><div class="eyebrow">Your well-being profile</div><h1>${r.title}</h1><p>${r.summary}</p><div class="wish"><strong>When to reach out</strong><br>${r.support}</div></div></div>`;document.getElementById('restart').onclick=()=>location.reload();celebrate()}
     next.onclick=()=>{if(answers[step]===null)return;if(step<questions.length-1){step++;render()}else showResult()};back.onclick=()=>{if(step>0){step--;render()}};
     document.addEventListener('keydown',e=>{if(document.querySelector('.result'))return;if(['1','2','3','4'].includes(e.key))select(Number(e.key)-1);if(e.key==='Enter'&&!next.disabled)next.click();if(e.key==='ArrowLeft'&&step>0)back.click()});
     render();
