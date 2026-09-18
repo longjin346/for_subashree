@@ -1,6 +1,9 @@
 # The Docker image that will be used to build your app
 image: alpine:latest
 create-pages:
+  stage: deploy
+  script:
+    - echo "Publishing the well-being tarot quiz"
   pages:
     # The folder that contains the files to be exposed at the Page URL
     publish: dist
