@@ -58,21 +58,21 @@
   <main class="shell">
     <header class="topbar" aria-label="Quiz progress"><div class="brand">Well-being tarot</div><div class="progress" aria-hidden="true"><span id="progress"></span></div><div class="count" id="count">1 / 5</div></header>
     <section class="stage" id="stage" aria-live="polite"></section>
-    <footer class="footer" id="footer"><div class="hint">Press 1–4 to choose · Enter to continue</div><div class="controls"><button class="nav" id="back" type="button">Back</button><button class="nav primary" id="next" type="button" disabled>Next</button></div></footer>
+    <footer class="footer" id="footer"><div class="hint">Press 1 - 4 to choose. Press Enter to continue.</div><div class="controls"><button class="nav" id="back" type="button">Back</button><button class="nav primary" id="next" type="button" disabled>Next</button></div></footer>
   </main>
   <script>
     const questions=[
-      {tag:"A tiny pocket of freedom",q:"Your calendar suddenly has a free 30 minutes. You…",a:["Stare out the window and become emotionally attached to a cloud","Make a glorious little to-do list and tick off one thing immediately","Find a snack, a plant, or a friendly human","Tell yourself, ‘I can do this,’ then do the mildly scary thing"],cards:["star","chariot","empress","strength"]},
-      {tag:"Plot twist",q:"A surprise challenge lands in your lap. Your energy is…",a:["Okay. Deep breath. We are brave and we are hydrated.","Who needs support? Also, does anyone need a biscuit?","Right. What’s the goal, and what’s step one?","There must be a lesson here… preferably one with a happy ending."],cards:["strength","empress","chariot","star"]},
-      {tag:"Team magic",q:"Your ideal team superpower would be…",a:["Making everyone feel welcome, seen, and fed","Finding the silver lining without becoming annoying about it","Being quietly unstoppable when things get tricky","Turning messy ideas into an actual plan"],cards:["empress","star","strength","chariot"]},
-      {tag:"The small win",q:"You’ve finished a long day. What feels most rewarding?",a:["Seeing one important thing finally move forward","Staying kind, even when the day had opinions","Feeling a little more like yourself again","Laughing with someone you enjoy being around"],cards:["chariot","strength","star","empress"]},
-      {tag:"Final vibe check",q:"Pick a mini mantra for this week:",a:["A fresh start can begin with one tiny hopeful thought.","I deserve good things, including a proper lunch break.","One step at a time still counts as forward.","I have more courage than my brain’s dramatic trailer suggests."],cards:["star","empress","chariot","strength"]}
+      {tag:"A little free time",q:"You get 30 free minutes. What do you do?",a:["Find a quiet corner and watch the clouds.","Clear 1 task. Tiny win, big mood.","Get a kopi / tea or chat with a teammate.","Start the task you have been politely avoiding."],cards:["star","chariot","empress","strength"]},
+      {tag:"Plot twist",q:"A surprise task lands. What is your first move?",a:["Breathe. You have handled busier days.","Check in with others. Snacks may help.","Pick the next step and begin.","Find 1 useful angle. Plot twist accepted."],cards:["strength","empress","chariot","star"]},
+      {tag:"Team magic",q:"Your dream team brings…",a:["Care, good food, and room to grow.","Fresh ideas and a hopeful outlook.","Calm support when things get spicy.","Clear goals and steady progress."],cards:["empress","star","strength","chariot"]},
+      {tag:"The small win",q:"What is the best end-of-day feeling?",a:["1 thing moved forward. Nice.","You stayed kind under pressure.","You feel recharged, not just logged off.","You shared a laugh with someone."],cards:["chariot","strength","star","empress"]},
+      {tag:"Final check-in",q:"Pick your reminder for this week",a:["Small hope can shift a whole day.","Make room for good food and good people.","1 step is still progress.","Quiet courage gets things moving."],cards:["star","empress","chariot","strength"]}
     ];
     const results={
-      star:{title:"The Star",type:"The hopeful human",image:"assets/the-star.png",wish:"May you have renewed energy, lighter days, and delightful signs that things are going to be okay. Keep shining—at a sensible brightness."},
-      strength:{title:"Strength",type:"The quiet powerhouse",image:"assets/strength.png",wish:"May you trust your resilience, protect your peace, and remember that gentle can also be mighty. You do not need to roar every day."},
-      empress:{title:"The Empress",type:"The good-vibes gardener",image:"assets/the-empress.png",wish:"May you be surrounded by care, creativity, and people who make your world feel more abundant. May your coffee be warm and your meetings be short."},
-      chariot:{title:"The Chariot",type:"The focused force",image:"assets/the-chariot.png",wish:"May you move forward with clarity, confidence, and enough momentum to get things done without sprinting into burnout."}
+      star:{title:"The Star",type:"The hopeful human",image:"assets/the-star.png",wish:"May you find fresh energy and lighter days. Keep shining at a sensible brightness."},
+      strength:{title:"Strength",type:"The quiet powerhouse",image:"assets/strength.png",wish:"May you trust your resilience and protect your peace. Gentle can be mighty."},
+      empress:{title:"The Empress",type:"The good-vibes gardener",image:"assets/the-empress.png",wish:"May you have care, creativity, and good company. May your kopi or tea be warm and your meetings be short."},
+      chariot:{title:"The Chariot",type:"The focused force",image:"assets/the-chariot.png",wish:"May you move forward with clarity and confidence. One meaningful step is enough."}
     };
     let step=0;const answers=Array(questions.length).fill(null);
     const stage=document.getElementById('stage'),back=document.getElementById('back'),next=document.getElementById('next'),progress=document.getElementById('progress'),count=document.getElementById('count'),footer=document.getElementById('footer');
