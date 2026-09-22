@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:opsz,wght@9..144,700&display=swap");
+:root {
+  --page-background: #f5a3b4;
+  --page-pattern: radial-gradient(circle at 15% 12%, rgba(255, 255, 255, 0.28), transparent 24%), radial-gradient(circle at 85% 88%, rgba(255, 212, 61, 0.22), transparent 28%), #f5a3b4;
+  --text-colour: #152454; --primary-colour: #2146c7; --surface-colour: #fff9e9;
+  --accent-colour: #ffd43d; --border-colour: #152454;
+  --body-font: "DM Sans", sans-serif; --display-font: "Fraunces", serif;
+  --content-width: 1040px; --illustration-width: 280px; --illustration-height: 320px;
+  --transition-speed: 0.35s; --focus-outline: 4px solid white;
+}
+body::before {
+  content: ""; position: fixed; inset: 0; pointer-events: none; opacity: 0.12;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+}
+.progress { border: 2px solid var(--border-colour); border-radius: 99px; background: rgba(255, 249, 233, 0.55); box-shadow: 2px 2px 0 var(--border-colour); }
+.progress span { background: var(--accent-colour); }
+.eyebrow { background: var(--surface-colour); border: 2px solid var(--border-colour); border-radius: 99px; box-shadow: 3px 3px 0 var(--border-colour); }
+.answer {
+  border: 2px solid var(--border-colour); border-radius: 15px; background: var(--surface-colour);
+  color: var(--text-colour); box-shadow: 4px 4px 0 var(--border-colour);
+}
+.answer:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--border-colour); }
+.answer.selected { background: var(--accent-colour); transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--border-colour); }
+.key { border: 2px solid var(--border-colour); border-radius: 9px; background: white; }
+.nav {
+  border: 2px solid var(--border-colour); border-radius: 12px; box-shadow: 3px 3px 0 var(--border-colour);
+  background: var(--surface-colour); color: var(--text-colour);
+}
+.nav.primary { background: var(--primary-colour); color: white; }
+.profile-mark { border: 3px solid var(--border-colour); border-radius: 50%; background: var(--accent-colour); box-shadow: 6px 6px 0 var(--border-colour); }
+.result-illustration { filter: drop-shadow(6px 6px 0 var(--border-colour)); }
+.wish, .configuration-error {
+  background: var(--surface-colour); border: 2px solid var(--border-colour);
+  border-radius: 16px; box-shadow: 5px 5px 0 var(--border-colour);
+}
+.configuration-error { padding: 24px; }
