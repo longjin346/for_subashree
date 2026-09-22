@@ -13,7 +13,7 @@ Keep the personality mapping unless you want to change how results are calculate
 | Find a quiet corner and watch the clouds. | Dreamer |
 | Clear 1 task. Tiny win, big mood. | Rationalist |
 | Get a kopi / tea or chat with a teammate. | Energizer |
-| Start the task you have been politely avoiding. | Caretaker |
+| Check in on a colleague you have not spoken to in a while. | Caretaker |
 
 ## Question 2: Plot twist
 
@@ -21,8 +21,8 @@ Keep the personality mapping unless you want to change how results are calculate
 
 | Answer | Maps to |
 | --- | --- |
-| Breathe. You have handled busier days. | Caretaker |
-| Check in with others. Snacks may help. | Energizer |
+| Check how the rest of the team is doing first. | Caretaker |
+| Rally the group. Better together. | Energizer |
 | Pick the next step and begin. | Rationalist |
 | Find 1 useful angle. Plot twist accepted. | Dreamer |
 
@@ -32,7 +32,7 @@ Keep the personality mapping unless you want to change how results are calculate
 
 | Answer | Maps to |
 | --- | --- |
-| Care, good food, and room to grow. | Energizer |
+| Energy that gets everyone moving together. | Energizer |
 | Fresh ideas and a hopeful outlook. | Dreamer |
 | Calm support when things get spicy. | Caretaker |
 | Clear goals and steady progress. | Rationalist |
@@ -50,7 +50,7 @@ Keep the personality mapping unless you want to change how results are calculate
 
 ## Question 5: Final check-in
 
-**Question:** Pick your reminder for this week
+**Question:** It has been a long week. What do you remind yourself?
 
 | Answer | Maps to |
 | --- | --- |
@@ -63,7 +63,7 @@ Keep the personality mapping unless you want to change how results are calculate
 
 ### Energizer
 
-**Description:** You bring momentum and lift the room. You help people move from ‘where do we start?’ to ‘let’s go’.
+**Description:** You bring momentum and lift the room. You help people move from 'where do we start?' to 'let's go'.
 
 **When to reach out:** You give a lot of energy to others. If you have been running on empty, a Mental Health First Aider can help you make space to recharge.
 
@@ -75,7 +75,7 @@ Keep the personality mapping unless you want to change how results are calculate
 
 ### Dreamer
 
-**Description:** You spot possibility and bring a hopeful perspective. You help people see beyond today’s to-do list.
+**Description:** You spot possibility and bring a hopeful perspective. You help people see beyond today's to-do list.
 
 **When to reach out:** If your thoughts feel heavy, sharing them with a Mental Health First Aider can make them easier to carry.
 
@@ -91,4 +91,4 @@ Keep the personality mapping unless you want to change how results are calculate
 - Use plain English, sentence case, and British English by default.
 - Keep the humour light and inclusive.
 - Make every profile constructive and non-judgemental.
-- If you change an answer’s mapping, test every profile before publishing.
+- If you change an answer's mapping, test every profile before publishing.
