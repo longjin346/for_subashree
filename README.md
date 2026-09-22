@@ -14,6 +14,8 @@ The included well-being quiz is the first working example. The site is responsiv
 
 The reusable engine and responsive layout live in `dist/app.js` and `dist/styles/base.css`. You usually do not need to edit them.
 
+For the current pilot’s questions, answers, profile copy, and mappings, start with [quiz-content.md](quiz-content.md). It is designed for writing and review. Apply approved copy changes to `dist/quiz.config.js` before publishing.
+
 ## Configure questions
 
 Every question and answer needs a unique ID. Each answer's `result` must match a result ID.
