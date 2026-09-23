@@ -63,11 +63,15 @@ Keep the personality mapping unless you want to change how results are calculate
 
 ### Energizer
 
+**Profile card:** `dist/assets/energizer-card.png`
+
 **Description:** You bring momentum and lift the room. You help people move from 'where do we start?' to 'let's go'.
 
 **When to reach out:** You give a lot of energy to others. If you have been running on empty, a Mental Health First Aider can help you make space to recharge.
 
 ### Caretaker
+
+**Profile card:** `dist/assets/caretaker-card.png`
 
 **Description:** You notice people and make room for them. Your care helps others feel supported.
 
@@ -75,11 +79,15 @@ Keep the personality mapping unless you want to change how results are calculate
 
 ### Dreamer
 
+**Profile card:** `dist/assets/dreamer-card.png`
+
 **Description:** You spot possibility and bring a hopeful perspective. You help people see beyond today's to-do list.
 
 **When to reach out:** If your thoughts feel heavy, sharing them with a Mental Health First Aider can make them easier to carry.
 
 ### Rationalist
+
+**Profile card:** `dist/assets/rationalist-card.png`
 
 **Description:** You bring calm thinking and practical clarity. You help turn a big problem into a useful next step.
 

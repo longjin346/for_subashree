@@ -176,11 +176,15 @@
     const resultCard = makeElement("div", "result");
     const resultCopy = makeElement("div", "result-copy");
     if (result.illustration) {
+      const card = makeElement("div", "result-card");
+      const cardInner = makeElement("div", "result-card__inner");
       const illustration = document.createElement("img");
       illustration.className = "result-illustration";
       illustration.src = result.illustration;
       illustration.alt = result.illustrationAlt;
-      resultCopy.appendChild(illustration);
+      cardInner.appendChild(illustration);
+      card.appendChild(cardInner);
+      resultCopy.appendChild(card);
     } else if (result.mark) {
       const mark = makeElement("div", "profile-mark", result.mark);
       mark.setAttribute("aria-hidden", "true");
@@ -209,7 +213,7 @@
     footer.appendChild(controls);
     heading.setAttribute("tabindex", "-1");
     heading.focus();
-    celebrate();
+    window.setTimeout(celebrate, 150);
   }
 
   next.addEventListener("click", function () {

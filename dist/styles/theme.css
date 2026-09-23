@@ -5,7 +5,7 @@
   --text-colour: #152454; --primary-colour: #2146c7; --surface-colour: #fff9e9;
   --accent-colour: #ffd43d; --border-colour: #152454;
   --body-font: "DM Sans", sans-serif; --display-font: "Fraunces", serif;
-  --content-width: 1040px; --illustration-width: 280px; --illustration-height: 320px;
+  --content-width: 1040px; --illustration-width: 280px;
   --transition-speed: 0.35s; --focus-outline: 4px solid white;
 }
 body::before {
@@ -28,7 +28,7 @@ body::before {
 }
 .nav.primary { background: var(--primary-colour); color: white; }
 .profile-mark { border: 3px solid var(--border-colour); border-radius: 50%; background: var(--accent-colour); box-shadow: 6px 6px 0 var(--border-colour); }
-.result-illustration { filter: drop-shadow(6px 6px 0 var(--border-colour)); }
+.result-card { filter: drop-shadow(6px 6px 0 var(--border-colour)); }
 .wish, .configuration-error {
   background: var(--surface-colour); border: 2px solid var(--border-colour);
   border-radius: 16px; box-shadow: 5px 5px 0 var(--border-colour);
