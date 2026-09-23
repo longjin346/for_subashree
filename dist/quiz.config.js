@@ -78,25 +78,25 @@ window.QUIZ_CONFIG = {
     {
       id: "energizer", title: "Energizer", mark: "E",
       description: "You bring momentum and lift the room. You help people move from 'where do we start?' to 'let's go'.",
-      illustration: "", illustrationAlt: "", supportTitle: "When to reach out",
+      illustration: "assets/energizer-card.png", illustrationAlt: "Energizer profile card showing a teammate sharing energy with colleagues.", supportTitle: "When to reach out",
       supportDescription: "You give a lot of energy to others. If you have been running on empty, a Mental Health First Aider can help you make space to recharge."
     },
     {
       id: "caretaker", title: "Caretaker", mark: "C",
       description: "You notice people and make room for them. Your care helps others feel supported.",
-      illustration: "", illustrationAlt: "", supportTitle: "When to reach out",
+      illustration: "assets/caretaker-card.png", illustrationAlt: "Caretaker profile card showing a teammate holding a growing plant with support from colleagues.", supportTitle: "When to reach out",
       supportDescription: "You always take care of people. It is time to take care of yourself too. A Mental Health First Aider can be there to listen."
     },
     {
       id: "dreamer", title: "Dreamer", mark: "D",
       description: "You spot possibility and bring a hopeful perspective. You help people see beyond today's to-do list.",
-      illustration: "", illustrationAlt: "", supportTitle: "When to reach out",
+      illustration: "assets/dreamer-card.png", illustrationAlt: "Dreamer profile card showing a teammate resting among flowers under a hopeful sky.", supportTitle: "When to reach out",
       supportDescription: "If your thoughts feel heavy, sharing them with a Mental Health First Aider can make them easier to carry."
     },
     {
       id: "rationalist", title: "Rationalist", mark: "R",
       description: "You bring calm thinking and practical clarity. You help turn a big problem into a useful next step.",
-      illustration: "", illustrationAlt: "", supportTitle: "When to reach out",
+      illustration: "assets/rationalist-card.png", illustrationAlt: "Rationalist profile card showing a teammate calmly planning at a desk.", supportTitle: "When to reach out",
       supportDescription: "You do not have to solve everything alone. A Mental Health First Aider can offer a listening ear when you need one."
     }
   ],

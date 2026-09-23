@@ -28,6 +28,8 @@ for (let scenario = 0; scenario < scenarioCount; scenario += 1) {
 
 config.results.forEach(function (result) {
   assert.equal(reachableResults.has(result.id), true, result.id + " should be reachable");
+  assert.equal(fs.existsSync("dist/" + result.illustration), true, result.id + " card should exist");
+  assert.equal(Boolean(result.illustrationAlt), true, result.id + " card should have alt text");
 });
 
 const tieConfig = {
