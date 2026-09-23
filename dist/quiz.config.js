@@ -26,7 +26,7 @@ window.QUIZ_CONFIG = {
         { id: "quiet-break", text: "Find a quiet corner and watch the clouds.", result: "dreamer" },
         { id: "tiny-win", text: "Clear 1 task. Tiny win, big mood.", result: "rationalist" },
         { id: "kopi-chat", text: "Get a kopi / tea or chat with a teammate.", result: "energizer" },
-        { id: "avoided-task", text: "Start the task you have been politely avoiding.", result: "caretaker" }
+        { id: "check-in-colleague", text: "Check in on a colleague you have not spoken to in a while.", result: "caretaker" }
       ]
     },
     {
@@ -34,8 +34,8 @@ window.QUIZ_CONFIG = {
       label: "Plot twist",
       text: "A surprise task lands. What is your first move?",
       answers: [
-        { id: "breathe", text: "Breathe. You have handled busier days.", result: "caretaker" },
-        { id: "check-in", text: "Check in with others. Snacks may help.", result: "energizer" },
+        { id: "check-team", text: "Check how the rest of the team is doing first.", result: "caretaker" },
+        { id: "rally-group", text: "Rally the group. Better together.", result: "energizer" },
         { id: "next-step", text: "Pick the next step and begin.", result: "rationalist" },
         { id: "useful-angle", text: "Find 1 useful angle. Plot twist accepted.", result: "dreamer" }
       ]
@@ -45,7 +45,7 @@ window.QUIZ_CONFIG = {
       label: "Team magic",
       text: "Your dream team brings…",
       answers: [
-        { id: "care-growth", text: "Care, good food, and room to grow.", result: "energizer" },
+        { id: "collective-energy", text: "Energy that gets everyone moving together.", result: "energizer" },
         { id: "fresh-ideas", text: "Fresh ideas and a hopeful outlook.", result: "dreamer" },
         { id: "calm-support", text: "Calm support when things get spicy.", result: "caretaker" },
         { id: "clear-goals", text: "Clear goals and steady progress.", result: "rationalist" }
@@ -65,7 +65,7 @@ window.QUIZ_CONFIG = {
     {
       id: "weekly-reminder",
       label: "Final check-in",
-      text: "Pick your reminder for this week",
+      text: "It has been a long week. What do you remind yourself?",
       answers: [
         { id: "small-hope", text: "Small hope can shift a whole day.", result: "dreamer" },
         { id: "good-people", text: "Make room for good food and good people.", result: "energizer" },
@@ -77,7 +77,7 @@ window.QUIZ_CONFIG = {
   results: [
     {
       id: "energizer", title: "Energizer", mark: "E",
-      description: "You bring momentum and lift the room. You help people move from ‘where do we start?’ to ‘let’s go’.",
+      description: "You bring momentum and lift the room. You help people move from 'where do we start?' to 'let's go'.",
       illustration: "", illustrationAlt: "", supportTitle: "When to reach out",
       supportDescription: "You give a lot of energy to others. If you have been running on empty, a Mental Health First Aider can help you make space to recharge."
     },
@@ -89,7 +89,7 @@ window.QUIZ_CONFIG = {
     },
     {
       id: "dreamer", title: "Dreamer", mark: "D",
-      description: "You spot possibility and bring a hopeful perspective. You help people see beyond today’s to-do list.",
+      description: "You spot possibility and bring a hopeful perspective. You help people see beyond today's to-do list.",
       illustration: "", illustrationAlt: "", supportTitle: "When to reach out",
       supportDescription: "If your thoughts feel heavy, sharing them with a Mental Health First Aider can make them easier to carry."
     },
