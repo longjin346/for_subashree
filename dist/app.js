@@ -176,14 +176,40 @@
     const resultCard = makeElement("div", "result");
     const resultCopy = makeElement("div", "result-copy");
     if (result.illustration) {
-      const card = makeElement("div", "result-card");
+      const card = makeElement("button", "result-card");
       const cardInner = makeElement("div", "result-card__inner");
       const illustration = document.createElement("img");
+      let spinAnimation = null;
+      let cardRotation = 0;
+      card.type = "button";
+      card.setAttribute("aria-label", "Spin your " + result.title + " card");
+      card.title = "Tap to spin";
       illustration.className = "result-illustration";
       illustration.src = result.illustration;
       illustration.alt = result.illustrationAlt;
       cardInner.appendChild(illustration);
       card.appendChild(cardInner);
+      card.addEventListener("click", function () {
+        if (!window.matchMedia || window.matchMedia("(prefers-reduced-motion: reduce)").matches || typeof cardInner.animate !== "function") return;
+        const currentTransform = window.getComputedStyle(cardInner).transform;
+        if (spinAnimation) spinAnimation.cancel();
+        cardRotation += 360;
+        const animation = cardInner.animate([
+          { transform: currentTransform },
+          { offset: 0.84, transform: "rotateY(" + cardRotation + "deg) rotateZ(1deg)" },
+          { transform: "rotateY(" + cardRotation + "deg)" }
+        ], {
+          duration: 280,
+          easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+          fill: "forwards"
+        });
+        spinAnimation = animation;
+        animation.onfinish = function () {
+          if (spinAnimation !== animation) return;
+          cardInner.style.transform = "rotateY(" + cardRotation + "deg)";
+          spinAnimation = null;
+        };
+      });
       resultCopy.appendChild(card);
     } else if (result.mark) {
       const mark = makeElement("div", "profile-mark", result.mark);
