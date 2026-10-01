@@ -6,12 +6,12 @@ Keep the personality mapping unless you want to change how results are calculate
 
 ## Question 1: A little free time
 
-**Question:** You get 30 free minutes. What do you do?
+**Question:** You get 30 free minutes. How do you spend it?
 
 | Answer | Maps to |
 | --- | --- |
-| Find a quiet corner and watch the clouds. | Dreamer |
-| Clear 1 task. Tiny win, big mood. | Rationalist |
+| Find a quiet corner and take a breather. | Dreamer |
+| Clear one quick task for a tiny win. | Rationalist |
 | Get a kopi / tea or chat with a teammate. | Energizer |
 | Check in on a colleague you have not spoken to in a while. | Caretaker |
 
@@ -21,10 +21,10 @@ Keep the personality mapping unless you want to change how results are calculate
 
 | Answer | Maps to |
 | --- | --- |
-| Check how the rest of the team is doing first. | Caretaker |
-| Rally the group. Better together. | Energizer |
-| Pick the next step and begin. | Rationalist |
-| Find 1 useful angle. Plot twist accepted. | Dreamer |
+| Check in on how the team is feeling first. | Caretaker |
+| Rally everyone for a quick planning session. | Energizer |
+| Make an elaborate plan, choose the next step, and get started. | Rationalist |
+| Adapt with optimism — maybe this will lead somewhere better. | Dreamer |
 
 ## Question 3: Team magic
 
@@ -54,9 +54,9 @@ Keep the personality mapping unless you want to change how results are calculate
 
 | Answer | Maps to |
 | --- | --- |
-| Small hope can shift a whole day. | Dreamer |
+| A small step is still progress. | Dreamer |
 | Make room for good food and good people. | Energizer |
-| 1 step is still progress. | Rationalist |
+| Rest now. Reset tomorrow. | Rationalist |
 | Quiet courage gets things moving. | Caretaker |
 
 ## Profile copy

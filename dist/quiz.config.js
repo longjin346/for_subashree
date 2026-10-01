@@ -21,10 +21,10 @@ window.QUIZ_CONFIG = {
     {
       id: "free-time",
       label: "A little free time",
-      text: "You get 30 free minutes. What do you do?",
+      text: "You get 30 free minutes. How do you spend it?",
       answers: [
-        { id: "quiet-break", text: "Find a quiet corner and watch the clouds.", result: "dreamer" },
-        { id: "tiny-win", text: "Clear 1 task. Tiny win, big mood.", result: "rationalist" },
+        { id: "quiet-break", text: "Find a quiet corner and take a breather.", result: "dreamer" },
+        { id: "tiny-win", text: "Clear one quick task for a tiny win.", result: "rationalist" },
         { id: "kopi-chat", text: "Get a kopi / tea or chat with a teammate.", result: "energizer" },
         { id: "check-in-colleague", text: "Check in on a colleague you have not spoken to in a while.", result: "caretaker" }
       ]
@@ -34,10 +34,10 @@ window.QUIZ_CONFIG = {
       label: "Plot twist",
       text: "A surprise task lands. What is your first move?",
       answers: [
-        { id: "check-team", text: "Check how the rest of the team is doing first.", result: "caretaker" },
-        { id: "rally-group", text: "Rally the group. Better together.", result: "energizer" },
-        { id: "next-step", text: "Pick the next step and begin.", result: "rationalist" },
-        { id: "useful-angle", text: "Find 1 useful angle. Plot twist accepted.", result: "dreamer" }
+        { id: "check-team", text: "Check in on how the team is feeling first.", result: "caretaker" },
+        { id: "rally-group", text: "Rally everyone for a quick planning session.", result: "energizer" },
+        { id: "next-step", text: "Make an elaborate plan, choose the next step, and get started.", result: "rationalist" },
+        { id: "useful-angle", text: "Adapt with optimism — maybe this will lead somewhere better.", result: "dreamer" }
       ]
     },
     {
@@ -67,9 +67,9 @@ window.QUIZ_CONFIG = {
       label: "Final check-in",
       text: "It has been a long week. What do you remind yourself?",
       answers: [
-        { id: "small-hope", text: "Small hope can shift a whole day.", result: "dreamer" },
+        { id: "small-hope", text: "A small step is still progress.", result: "dreamer" },
         { id: "good-people", text: "Make room for good food and good people.", result: "energizer" },
-        { id: "one-step", text: "1 step is still progress.", result: "rationalist" },
+        { id: "one-step", text: "Rest now. Reset tomorrow.", result: "rationalist" },
         { id: "quiet-courage", text: "Quiet courage gets things moving.", result: "caretaker" }
       ]
     }
